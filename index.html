@@ -6,23 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link type="text/css" rel="stylesheet" href="./main.css">
 </head>
 
 <body>
   <h1>Spell Checker App</h1>
+  <div class="main">
+    <div class="submission-container">
+      <form id="form">
+        <label for="word">Word:</label>
+        <input required id="word" name="word" />
+        <input type="submit" value="Submit" />
+      </form>
 
-  <form id="form">
-    <label for="word">Word:</label>
-    <input required id="word" name="word" />
-    <input type="submit" value="Submit" />
-  </form>
+      <div id="result"></div>
+    </div>
 
-  <div id="result"></div>
+    <div id="previous">
+      <div class="prev-title">Previous Submissions</div>
+      <div class="prev-header">Input</div>
+      <div class="prev-header">Suggestion</div>
+      <div class="prev-entry" id="prev-attempt"></div>
+      <div class="prev-entry" id="prev-result"></div>
+    </div>
+  </div>
 
   <script>
     const form = document.getElementById('form');
     const wordInput = document.getElementById('word');
     const result = document.getElementById('result');
+    const prevAttempt = document.getElementById('prev-attempt');
+    const prevResult = document.getElementById('prev-result');
 
     form.addEventListener('submit', async evt => {
       evt.preventDefault();
@@ -42,6 +56,10 @@
       } else {
         result.innerText = `Did you mean "${body.word}"?`;
       }
+
+      // Add to previous suggestions section
+      prevAttempt.textContent = word;
+      prevResult.textContent = body.correct ? word : body.word;
     });
   </script>
 </body>
