@@ -16,22 +16,33 @@
     }
 
     div.submission-container {
+      margin-top: 10px;
       flex-grow: 1;
     }
 
+    div.submission-container div {
+      margin-top: 10px;
+    }
+
     div#previous {
-      flex-grow: 1;
+      flex-grow: .5;
       display: grid;
       grid-template-columns: 100px 100px;
+    }
+
+    div#previous div {
+      margin-top: 10px;
     }
 
     .prev-title {
       grid-column: 1 / 3;
       grid-row: 1;
+      font-size: 1.2em;
     }
 
     .prev-header {
       grid-row: 2;
+      font-weight: bold;
     }
 
     .prev-entry {
@@ -54,11 +65,11 @@
     </div>
 
     <div id="previous">
-      <p class="prev-title">Previous Submissions</p>
-      <p class="prev-header">Input</p>
-      <p>Suggestion</p>
-      <p class="prev-entry" id="prev-attempt"></p>
-      <p class="prev-entry" id="prev-result"></p>
+      <div class="prev-title">Previous Submissions</div>
+      <div class="prev-header">Input</div>
+      <div class="prev-header">Suggestion</div>
+      <div class="prev-entry" id="prev-attempt"></div>
+      <div class="prev-entry" id="prev-result"></div>
     </div>
   </div>
 
