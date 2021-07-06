@@ -9,4 +9,11 @@
   - Quick proof that breakpoints in the browser work, and performance tools
   - Set up a launch config for Edge for re-use
 - devtools
-  - todo@brandon
+  - use the inspect button to attach devtools to the active target (pick up from where Connor leaves off)
+  - Quick highlight of the styles/computed/eventlistener/A11y sidepanes
+  - Use links in devtools style pane to open up source code
+  - Use layout pane to inspect CSS Grid/flexbox and fix an issue
+  - Use network tool to inspect one of the spellcheck loops
+  - Use screencast to show page inside VSCode view instead of separate browser
+  - Bring it all together - show request loop with devtools open
+

@@ -6,23 +6,68 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link type="text/css" rel="stylesheet" href="./index.css">
+  <style>
+    /* Todo: move to stylesheet, currently not working */
+    div.main {
+      display: flex;
+      flex-direction: row;
+      background-color: #e0e5ff;
+    }
+
+    div.submission-container {
+      flex-grow: 1;
+    }
+
+    div#previous {
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: 100px 100px;
+    }
+
+    .prev-title {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    .prev-header {
+      grid-row: 2;
+    }
+
+    .prev-entry {
+      grid-row: 3;
+    }
+  </style>
 </head>
 
 <body>
   <h1>Spell Checker App</h1>
+  <div class="main">
+    <div class="submission-container">
+      <form id="form">
+        <label for="word">Word:</label>
+        <input required id="word" name="word" />
+        <input type="submit" value="Submit" />
+      </form>
 
-  <form id="form">
-    <label for="word">Word:</label>
-    <input required id="word" name="word" />
-    <input type="submit" value="Submit" />
-  </form>
+      <div id="result"></div>
+    </div>
 
-  <div id="result"></div>
+    <div id="previous">
+      <p class="prev-title">Previous Submissions</p>
+      <p class="prev-header">Input</p>
+      <p>Suggestion</p>
+      <p class="prev-entry" id="prev-attempt"></p>
+      <p class="prev-entry" id="prev-result"></p>
+    </div>
+  </div>
 
   <script>
     const form = document.getElementById('form');
     const wordInput = document.getElementById('word');
     const result = document.getElementById('result');
+    const prevAttempt = document.getElementById('prev-attempt');
+    const prevResult = document.getElementById('prev-result');
 
     form.addEventListener('submit', async evt => {
       evt.preventDefault();
@@ -42,6 +87,10 @@
       } else {
         result.innerText = `Did you mean "${body.word}"?`;
       }
+
+      // Add to previous suggestions section
+      prevAttempt.textContent = word;
+      prevResult.textContent = body.correct ? word : body.word;
     });
   </script>
 </body>
