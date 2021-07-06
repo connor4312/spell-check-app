@@ -1,0 +1,12 @@
+- js-debug
+  - Open debug terminal to start the app, show what it does. Show you can also use the codelens in the package.json.
+  - Quick demo of native notebooks via restbook
+  - Show worker_thread debugging, breakpoints etc. in both
+  - Show deminification by stepping edit-distance.js
+  - Show performance tooling using the table
+  - Additionally show the flame graph, and realtime performance view
+  - Show the easy ways to get started in browser debugging--clicking link in the debug terminal, and "Debug: Open Link"
+  - Quick proof that breakpoints in the browser work, and performance tools
+  - Set up a launch config for Edge for re-use
+- devtools
+  - todo@brandon

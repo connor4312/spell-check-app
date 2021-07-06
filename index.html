@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Spell Checker App</h1>
+
+  <form id="form">
+    <label for="word">Word:</label>
+    <input required id="word" name="word" />
+    <input type="submit" value="Submit" />
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    const form = document.getElementById('form');
+    const wordInput = document.getElementById('word');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', async evt => {
+      evt.preventDefault();
+
+      const word = wordInput.value;
+      result.innerText = 'Thinking...';
+
+      const response = await fetch('/api/spell-check', {
+        method: 'POST',
+        body: JSON.stringify({ word }),
+        headers: { 'content-type': 'application/json' }
+      });
+
+      const body = await response.json();
+      if (body.correct) {
+        result.innerText = `${word} is spelled correctly!`;
+      } else {
+        result.innerText = `Did you mean "${body.word}"?`;
+      }
+    });
+  </script>
+</body>
+
+</html>

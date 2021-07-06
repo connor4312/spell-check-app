@@ -1,0 +1,19 @@
+{
+  "name": "spell-check-app",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Connor Peet <connor@peet.io>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "damerau-levenshtein": "^1.0.7",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.15"
+  }
+}
