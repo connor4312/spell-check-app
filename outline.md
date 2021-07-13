@@ -9,11 +9,27 @@
   - Quick proof that breakpoints in the browser work, and performance tools
   - Set up a launch config for Edge for re-use
 - devtools
-  - use the inspect button to attach devtools to the active target (pick up from where Connor leaves off)
-  - Quick highlight of the styles/computed/eventlistener/A11y sidepanes
-  - Use links in devtools style pane to open up source code
-  - Use layout pane to inspect CSS Grid/flexbox and fix an issue
+  - Intro:
+    - My name is Brandon Goddard, and I work on the Microsoft Edge DevTools Team
+    - I'm here to talk about the work we have been doing on the Microsoft Edge Devtools VSCOde extension and the integration with
+      JavaScript debugger.
+    - We have been working on bringing some of the most commonly used Developer tools directly into VScode to give a more seamless
+      experience for authoring and debugging webpages directly from your VSCOde editor
+  - Inpect Button Integration
+    - Installation process - yes
+    - use the inspect button to attach devtools to the active target (pick up from where Connor leaves off)
+    - Quick highlight of the styles/computed/eventlistener/A11y sidepanes
+  - Example: Fix CSS Grid/flexbox issue
+    - Talk about new Grid/Flexbox tooling
+    - Example project: highlight Flex/grid tools, use to fix alignment on table
+      - Use elements tool to select element, toggle on Grid
+      - Use links in devtools style pane to open up source code
+      - Show MDN documentation inline
+      - Fix the issue
+      - Same with flexbox (show icons if availble)
   - Use network tool to inspect one of the spellcheck loops
-  - Use screencast to show page inside VSCode view instead of separate browser
+  - Launch arbitrary edge instances for debugging
+    - Use screencast to show page inside VSCode view instead of separate browser
+    - Show
   - Bring it all together - show request loop with devtools open
 
