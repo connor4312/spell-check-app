@@ -13,10 +13,14 @@
     - My name is Brandon Goddard, and I work on the Microsoft Edge DevTools Team
     - I'm here to talk about the work we have been doing on the Microsoft Edge Devtools VSCOde extension and the integration with
       JavaScript debugger.
+    - Connor demonstrated Javascript debugging and console functionality
     - We have been working on bringing some of the most commonly used Developer tools directly into VScode to give a more seamless
       experience for authoring and debugging webpages directly from your VSCOde editor
+    - We Augment this with elements and network debugging
   - Inpect Button Integration
-    - Installation process - yes
+    - Configure launch.json for edge
+    - Installation process
+    - Show the new page, documentation, 
     - use the inspect button to attach devtools to the active target (pick up from where Connor leaves off)
     - Quick highlight of the styles/computed/eventlistener/A11y sidepanes
   - Example: Fix CSS Grid/flexbox issue
@@ -26,10 +30,12 @@
       - Use links in devtools style pane to open up source code
       - Show MDN documentation inline
       - Fix the issue
-      - Same with flexbox (show icons if availble)
   - Use network tool to inspect one of the spellcheck loops
-  - Launch arbitrary edge instances for debugging
-    - Use screencast to show page inside VSCode view instead of separate browser
-    - Show
-  - Bring it all together - show request loop with devtools open
+    - Throttle to show offline
+    - turn back on afterward
+  
+  If time:
+  - Use screencast to show page inside VSCode view instead of separate browser
+  - Show documentation page
+  - Launch arbitrary edge instances for debugging, switch between targets
 
